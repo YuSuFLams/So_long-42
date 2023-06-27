@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/17 00:19:02 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/06/24 02:19:06 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/06/27 02:56:29 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/06/27 04:39:22 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,30 +23,6 @@ void	check_sides_wall(char *line)
 		ft_printf("\033[0;36mYour map should start and end sides by 1\n");
 		exit(EXIT_FAILURE);
 	}
-}
-
-void check_pos_player(t_us *game)
-{
-    char **str;
-    int i;
-    int j;
-
-    game->coins = count_col(game);
-    str = game->map;
-    i = -1;
-    while (++i < game->nbr_line)
-    {
-        j = -1;
-        while (++j < game->count_line)
-        {
-            if (str[i][j] == 'P')
-            {
-                game->ply_x = ++i;
-                game->ply_y = ++j;
-                break ;
-            }
-        }
-    }
 }
 
 void	check_map_char(char *line)
@@ -93,4 +69,27 @@ void	check_line_map(char *line)
 		ft_printf("\033[0;35mMap format must be valid\n");
 		exit(EXIT_FAILURE);
 	}
+}
+
+void check_pos_player(t_us *game)
+{
+    char **str;
+    int i;
+    int j;
+
+    game->coins = count_col(game);
+    str = game->map;
+    i = -1;
+    while (++i < game->nbr_line)
+    {
+        j = -1;
+        while (++j < game->length_line)
+        {
+            if (str[i][j] == 'P')
+            {
+                game->ply_x = i;
+                game->ply_y = j;
+            }
+        }
+    }
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/17 00:42:08 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/06/24 02:22:15 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/06/27 02:53:40 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/06/27 03:30:21 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int count_col(t_us *game)
     while (++i < game->nbr_line)
     {
         j = -1;
-        while (++j < game->count_line)
+        while (++j < game->length_line)
         {
             if (game->map[i][j] == 'C')
                 game->coins++;

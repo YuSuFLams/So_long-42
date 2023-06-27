@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/17 00:03:25 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/06/24 02:03:45 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/06/27 02:28:24 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/06/27 02:29:38 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,4 +107,3 @@ char	*set_next_line(char *line)
 	str[j] = '\0';
 	return (free(line), str);
 }
-

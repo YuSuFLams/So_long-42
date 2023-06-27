@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/16 23:48:55 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/06/24 02:36:10 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/06/27 02:27:24 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/06/27 05:07:38 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-# include <mlx.h>
+// # include <mlx.h>
 # include <stdio.h>
 # include <errno.h>
 # include <fcntl.h>
@@ -35,7 +35,7 @@ typedef struct s_us
 	
 	char	*line;
 	char	**map;
-	int		count_line;
+	int		length_line;
 	int		nbr_line;
 	int		move_count;
 	
@@ -43,7 +43,6 @@ typedef struct s_us
 	int		ply_x;
 	
 	int		coins;
-	int		cn_ex;
 
 	void	*wall;
 	void	*empty;
@@ -107,11 +106,11 @@ void	check_error(int col, int ply, int ext);
 void	check(char *line, int *ply, int *col, int *ext);
 
 //movement_player
-int	    key_move(int key, t_us *vars);
-void	move_right(t_us *vars);
-void	move_left(t_us *vars);
-void	move_down(t_us *vars);
-void	move_up(t_us *vars);
+int		key_move(int key, t_us *vars);
+void	move_right(t_us *vars);//
+void	move_left(t_us *vars);//
+void	move_down(t_us *vars);//
+void	move_up(t_us *vars);//
 
 //put_windows
 void	add_img(t_us *vars);

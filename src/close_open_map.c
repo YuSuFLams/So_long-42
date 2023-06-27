@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/17 01:24:06 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/06/24 02:33:05 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/06/27 02:56:25 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/06/27 04:34:00 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,9 +99,9 @@ void	put_map(char *file)
 		exit(1);
 	}
 	vars->map = read_map(file, j, vars);
-	check_pos_player(vars);
 	if (!vars->map)
 		return ;
+	check_pos_player(vars);
 	set_window(vars);
 	if (close(fd) != 0)
 	{

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/17 02:04:33 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/06/24 02:28:48 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/06/27 02:56:04 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/06/27 03:26:11 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	**read_map(char *file, int i, t_us *vars)
 		line = get_next_line(fd);
 		if (!line)
 			break ;
-		vars->count_line = count_line(line);
+		vars->length_line = count_line(line);
 		i++;
 		str = ft_strjoin(str, line);
 		free(line);

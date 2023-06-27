@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/19 21:12:46 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/06/24 02:09:14 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/06/27 02:44:12 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/06/27 02:44:30 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,3 @@ void	ft_uputnbr(unsigned int n, int *d)
 		ft_uputnbr(nb % 10, d);
 	}
 }
-

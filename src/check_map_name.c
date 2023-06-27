@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/16 23:56:49 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/06/24 02:12:36 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/06/27 02:41:44 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/06/27 05:10:57 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ void	check_name_map(char *map_name)
 		if (*(map_name + i + 1) != 'b' || *(map_name + i + 2) != 'e' || \
 		*(map_name + i + 3) != 'r' || *(map_name + i + 4) != '\0')
 		{
-			ft_printf("\033[0;36mERROR: \033[0;32mINVALID ARGUMENTS !\n");
-			ft_printf("\033[0;31mPlease choose a valid map name.\n");
-			exit(EXIT_FAILURE);
+			ft_printf("\033[0;36mERROR: \033[0;36mYour Map Should End By ");
+			ft_printf("\033[0;36m(.ber) \"./so_long maps/*.ber)\" !!.\n");
+            exit(EXIT_FAILURE);
 		}
 	}
 }

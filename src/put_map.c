@@ -5,12 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/17 02:47:00 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/06/24 02:35:08 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/06/27 02:56:07 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/06/27 05:03:57 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
+
+void	put_image_in_game(t_us *game)
+{	
+	int	x;
+	int	y;
+
+	game->wall = mlx_xpm_file_to_image(game->mlx, "textures/Wall.xpm", &y, &x);
+	game->empty = mlx_xpm_file_to_image(game->mlx, "textures/empty.xpm", \
+	&y, &x);
+	game->player = mlx_xpm_file_to_image(game->mlx, "textures/player.xpm", \
+	&y, &x);
+	game->col = mlx_xpm_file_to_image(game->mlx, "textures/Coins.xpm", &y, &x);
+	game->exit = mlx_xpm_file_to_image(game->mlx, "textures/exit.xpm", &y, &x);
+}
 
 void	ft_maps(t_us *game, int *y, int *x)
 {
@@ -40,21 +54,7 @@ void	add_img(t_us *vars)
 	while ((++i) < vars->nbr_line)
 	{
 		j = -1;
-		while ((++j) < vars->count_line)
+		while ((++j) < vars->length_line)
 			ft_maps(vars, &i, &j);
 	}
-}
-
-void	put_image_in_game(t_us *game)
-{	
-	int	x;
-	int	y;
-
-	game->wall = mlx_xpm_file_to_image(game->mlx, "textures/Wall.xpm", &x, &y);
-	game->empty = mlx_xpm_file_to_image(game->mlx, "textures/empty.xpm", \
-	&x, &y);
-	game->player = mlx_xpm_file_to_image(game->mlx, "textures/player.xpm", \
-	&x, &y);
-	game->col = mlx_xpm_file_to_image(game->mlx, "textures/Coins.xpm", &x, &y);
-	game->exit = mlx_xpm_file_to_image(game->mlx, "textures/exit.xpm", &x, &y);
 }
