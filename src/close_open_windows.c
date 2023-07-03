@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 02:54:21 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/06/27 05:11:14 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/07/03 05:17:50 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	close_windows(t_us *vars)
 {
 	ft_printf("\033[o;36mYou tab a ESC:\n");
 	mlx_destroy_window(vars->mlx, vars->mlx_win);
-	free_map(vars, vars->map);
+	free_map(vars);
 	free(vars);
 	exit(0);
 }
@@ -42,6 +42,7 @@ void	set_window(t_us *vars)
 		mlx_hook(vars->mlx_win, 2, 1L << 0, key_move, vars);
 		mlx_hook(vars->mlx_win, 17, 1L << 0, close_windows, vars);
 		mlx_loop(vars->mlx);
-        free_map(vars, vars->map);
+		free_map(vars);
+		free(vars);
 	}
 }

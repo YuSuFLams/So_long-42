@@ -44,8 +44,8 @@ void	move_down(t_us *vars)
 
 static void valid_all_path(t_us *game, int i, int j)
 {
-    if (game->map[i][j] == 'C' || game->map[i][j] == 'E')
-		game->cn_ex++;
+	if (game->map[i][j] == 'C' || game->map[i][j] == 'E')
+		game->cl_ex++;
 	if (game->map[i - 1][j] != '1')
 	{
 		game->map[i - 1][j] = '1';
@@ -70,11 +70,16 @@ static void valid_all_path(t_us *game, int i, int j)
 
 void test_game(t_us *game)
 {
-    count_col(game);
-    valid_all_path(game, game->ply_y, game->ply_x);
-    if (game->col + 1 != game->cn_ex)
+    valid_all_path(game, game->ply_x, game->ply_y);
+    if (game->coins + 1 != game->cl_ex)
     {
-        free_map(game,game->map);
-        put_error("\033[0;36mMust Be Valid Path\n");
+		ft_printf("your col is: %d\n", game->coins);
+		ft_printf("cl_ex: %d\n", game->cl_ex);
+		ft_printf("pos player :\nx= %d\ny = %d\n", game->ply_x, game->ply_y);
+        // free_map(game);
+		// free(game);
+        // put_error("\033[0;36mMust Be Valid Path\n");
     }
+	else
+		printf("Ök");
 }

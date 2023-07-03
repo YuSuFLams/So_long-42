@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 02:27:24 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/06/27 05:07:38 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/07/03 05:13:54 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ typedef struct s_us
 	
 	int		ply_y;
 	int		ply_x;
-	
+	int 	cl_ex;
 	int		coins;
 
 	void	*wall;
@@ -117,7 +117,9 @@ void	add_img(t_us *vars);
 void	set_window(t_us *vars);
 int	    close_windows(t_us *vars);
 void	put_image_in_game(t_us *game);
-void	free_map(t_us *vars, char **map);
+void	free_map(t_us *vars);
 void	ft_maps(t_us *game, int *y, int *x);
+
+void test_game(t_us *game);
 
 #endif

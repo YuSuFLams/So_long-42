@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 02:35:00 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/06/27 03:07:43 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/07/03 05:13:42 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ void put_error(char *s)
 	exit(EXIT_FAILURE);
 }
 
-void	free_map(t_us *vars, char **map)
+void	free_map(t_us *vars)
 {
 	int	i;
 
 	i = -1;
 	while ((++i) < vars->nbr_line)
-		free(map[i]);
-	free(map);
+		free(vars->map[i]);
+	free(vars->map);
 }

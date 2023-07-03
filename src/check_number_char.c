@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 02:53:40 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/06/27 03:30:21 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/07/03 03:37:08 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,11 @@ int	count_exit(char *line)
 
 int count_col(t_us *game)
 {
+	int col;
     int i;
     int j;
 
+	col = 0;
     i = -1;
     while (++i < game->nbr_line)
     {
@@ -70,8 +72,8 @@ int count_col(t_us *game)
         while (++j < game->length_line)
         {
             if (game->map[i][j] == 'C')
-                game->coins++;
+                col++;
         }
     }
-    return (game->coins);
+    return (col);
 }
